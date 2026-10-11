@@ -9,12 +9,9 @@ on:
       - "modules/**"
       - ".github/workflows/terraform.yml"
   pull_request:
+    types: [opened, synchronize, reopened]
     branches:
       - main
-    paths:
-      - "management/**"
-      - "modules/**"
-      - ".github/workflows/terraform.yml"
   workflow_dispatch:
 
 permissions:
@@ -22,8 +19,8 @@ permissions:
   pull-requests: write
 
 concurrency:
-  group: terraform-${{ github.ref }}
-  cancel-in-progress: false
+  group: terraform-${{ github.head_ref || github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
 jobs:
   terraform:

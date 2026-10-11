@@ -20,11 +20,6 @@ resource "github_repository" "this" {
   topics                 = var.topics
 }
 
-resource "github_repository_vulnerability_alerts" "this" {
-  count      = var.vulnerability_alerts ? 1 : 0
-  repository = github_repository.this.name
-}
-
 resource "github_branch_protection" "this" {
   count          = var.enforce_branch_protection ? 1 : 0
   repository_id  = github_repository.this.name

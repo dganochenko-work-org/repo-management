@@ -22,7 +22,6 @@ variable "repositories" {
     allow_merge_commit              = optional(bool, false)
     allow_squash_merge              = optional(bool, true)
     allow_rebase_merge              = optional(bool, false)
-    vulnerability_alerts            = optional(bool, true)
     topics                          = optional(list(string), [])
     enforce_branch_protection       = optional(bool, false)
     branch_protection_branch        = optional(string, "main")

@@ -51,12 +51,6 @@ variable "allow_rebase_merge" {
   default     = false
 }
 
-variable "vulnerability_alerts" {
-  description = "Enable security alerts for vulnerable dependencies"
-  type        = bool
-  default     = true
-}
-
 variable "topics" {
   description = "List of topics/tags for the repository"
   type        = list(string)

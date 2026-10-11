@@ -11,7 +11,6 @@ module "repositories" {
   allow_merge_commit              = each.value.allow_merge_commit
   allow_squash_merge              = each.value.allow_squash_merge
   allow_rebase_merge              = each.value.allow_rebase_merge
-  vulnerability_alerts            = each.value.vulnerability_alerts
   topics                          = each.value.topics
   enforce_branch_protection       = each.value.enforce_branch_protection
   branch_protection_branch        = each.value.branch_protection_branch

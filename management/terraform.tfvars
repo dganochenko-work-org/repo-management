@@ -41,8 +41,8 @@ apps = {
     review_cycle    = "biannual"
     expiry_date     = "2027-01-01"
     repositories = [
-      "repo-delta-dev"
-      # "repo-delta-prod" will be added via Pull Request to demonstrate the GitOps workflow
+      # "repo-delta-dev",
+      "repo-delta-prod"
     ]
   }
 }
